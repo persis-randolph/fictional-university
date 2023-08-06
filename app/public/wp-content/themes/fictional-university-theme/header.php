@@ -1,0 +1,1 @@
+<h1>Greetings for header.php</h1>
