@@ -9,3 +9,10 @@
   }
 
   add_action('wp_enqueue_scripts', 'university_files');
+
+  // adds the page/post name as the title in the browser tab
+  function university_features() {
+    add_theme_support('title-tag');
+  }
+
+  add_action('after_setup_theme', 'university_features');
