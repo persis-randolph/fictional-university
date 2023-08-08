@@ -19,22 +19,52 @@
     </div>
 
     <div class="container container--narrow page-section">
-      <div class="metabox metabox--position-up metabox--with-home-link">
-        <p>
-          <a class="metabox__blog-home-link" href="#">
-            <i class="fa fa-home"aria-hidden="true"></i>
-              Back to About Us
-          </a><span class="metabox__main">Our History</span>
-        </p>
-      </div>
 
-      <!-- <div class="page-links">
-        <h2 class="page-links__title"><a href="#">About Us</a></h2>
-        <ul class="min-list">
-          <li class="current_page_item"><a href="#">Our History</a></li>
-          <li><a href="#">Our Goals</a></li>
-        </ul>
-      </div> -->
+      <!-- show breadcrumbs on child pages only -->
+      <?php
+        $postId = get_the_ID();
+        $parentPostId = wp_get_post_parent_id($postId);
+        $parentPostTitle = get_the_title($parentPostId);
+        $parentPostPermalink = get_permalink($parentPostId);
+        if ($parentPostId !== 0) { ?>
+          <div class="metabox metabox--position-up metabox--with-home-link">
+            <p>
+              <a class="metabox__blog-home-link" href="<?php echo $parentPostPermalink ?>">
+                <i class="fa fa-home"aria-hidden="true"></i>
+                  Back to <?php echo $parentPostTitle; ?>
+              </a><span class="metabox__main"><?php the_title(); ?></span>
+            </p>
+          </div>
+        <?php }
+      ?>
+
+      <!-- links to child pages if applicable -->
+      <?php 
+        $testArray = get_pages(array(
+          'child_of' => $postId
+        ));
+
+        if ($parentPostId or $testArray) { ?>
+          <div class="page-links">
+            <h2 class="page-links__title">
+              <a href="<?php echo $parentPostPermalink ?>"><?php echo $parentPostTitle; ?></a>
+            </h2>
+            <ul class="min-list">
+              <?php
+                if ($parentPostId) {
+                  $findChildrenOf = $parentPostId;
+                } else {
+                  $findChildrenOf = $postId;
+                }
+                wp_list_pages(array(
+                  'title_li' => NULL,
+                  'child_of' => $findChildrenOf
+                ));
+              ?>
+            </ul>
+          </div>
+        <?php }
+      ?>
 
       <div class="generic-content">
         <?php the_content(); ?>
