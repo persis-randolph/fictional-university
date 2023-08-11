@@ -1,5 +1,4 @@
 <?php
-
   function university_files() {
     wp_enqueue_script('main-university-js', get_theme_file_uri('/build/index.js'), array('jquery'), '1.0', true);
     wp_enqueue_style('university_main_styles', get_theme_file_uri('/build/style-index.css'));
@@ -13,6 +12,10 @@
   // adds the page/post name as the title in the browser tab
   function university_features() {
     add_theme_support('title-tag');
+    // for adding dynamic wordpress menus
+    // register_nav_menu('headerMenuLocation', 'Header Menu Location');
+    // register_nav_menu('footerLocation1', 'Footer Location 1');
+    // register_nav_menu('footerLocation2', 'Footer Location 2');
   }
 
   add_action('after_setup_theme', 'university_features');
