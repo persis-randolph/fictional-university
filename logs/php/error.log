@@ -24,3 +24,7 @@ Stack trace:
 #7 {main}
   thrown in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/header.php on line 7
 [08-Aug-2023 16:59:13 UTC] PHP Parse error:  Unclosed '{' on line 3 in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/page.php on line 75
+[13-Aug-2023 20:51:29 UTC] PHP Warning:  Undefined variable $parentPostPermalink in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 23
+[13-Aug-2023 20:51:29 UTC] PHP Warning:  Undefined variable $parentPostTitle in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 25
+[13-Aug-2023 20:51:58 UTC] PHP Warning:  Undefined variable $parentPostPermalink in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 23
+[13-Aug-2023 20:51:58 UTC] PHP Warning:  Undefined variable $parentPostTitle in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/single.php on line 25

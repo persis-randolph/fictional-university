@@ -32,7 +32,9 @@ get_header(); ?>
           </div>
         </div>
       <?php }
-    ?>
+      // automatically creates pagination links where needed
+      echo paginate_links();
+  ?>
   </div>
 
 <?php get_footer();
