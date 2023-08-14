@@ -44,7 +44,11 @@
                   <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                 </h5>
                 <p>
-                  <?php echo wp_trim_words(get_the_content(), 18); ?>
+                  <?php if (has_excerpt()) {
+                    echo get_the_excerpt();
+                    } else {
+                    echo wp_trim_words(get_the_content(), 18);
+                    } ?>
                   <a href="<?php the_permalink(); ?>" class="nu gray">Learn more</a>
                 </p>
               </div>
@@ -54,7 +58,7 @@
           ?>
 
           <p class="t-center no-margin">
-            <a href="#" class="btn btn--blue">View All Events</a>
+            <a href="<?php echo get_post_type_archive_link('event') ?>" class="btn btn--blue">View All Events</a>
           </p>
         </div>
       </div>
@@ -83,7 +87,11 @@
                     <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                   </h5>
                   <p>
-                    <?php echo wp_trim_words(get_the_content(), 18); ?>
+                    <?php if (has_excerpt()) {
+                      echo get_the_excerpt();
+                    } else {
+                      echo wp_trim_words(get_the_content(), 18);
+                    } ?>
                     <a href="<?php the_permalink(); ?>" class="nu gray">Read more</a>
                   </p>
                 </div>
