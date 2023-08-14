@@ -15,7 +15,12 @@ function university_post_types() {
       'rewrite' => array(
         'slug' => 'events'
       ),
-      'has_archive' => true
+      'has_archive' => true,
+      'supports' => array(
+        'title',
+        'editor',
+        'excerpt'
+      )
     ));
   }
 
