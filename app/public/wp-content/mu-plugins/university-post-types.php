@@ -19,8 +19,7 @@ function university_post_types() {
       'supports' => array(
         'title',
         'editor',
-        'excerpt',
-        'custom-fields'
+        'excerpt'
       )
     ));
   }
