@@ -30,7 +30,7 @@
           $today = date('Ymd');
           $homepageEvents = new WP_Query(array(
             // -1 would indicate all posts that fit the query
-            'posts_per_page' => -1,
+            'posts_per_page' => 2,
             'post_type' => 'event',
             'meta_key' => 'event_date',
             'orderby' => 'meta_value_num', // can use 'rand' here for random
