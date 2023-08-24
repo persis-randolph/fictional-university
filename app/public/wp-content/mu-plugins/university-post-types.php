@@ -60,7 +60,8 @@ function university_post_types() {
       'menu_icon' => 'dashicons-welcome-learn-more',
       'supports' => array(
         'title',
-        'editor'
+        'editor',
+        'thumbnail'
       )
     ));
   }

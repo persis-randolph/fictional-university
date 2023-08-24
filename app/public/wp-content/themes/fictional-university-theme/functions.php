@@ -12,6 +12,9 @@
   // adds the page/post name as the title in the browser tab
   function university_features() {
     add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_image_size('professorLandscape', 400, 260, true); // nickname, width, height, canCrop?
+    add_image_size('professorPortrait', 480, 650, true);
     // for adding dynamic wordpress menus
     // register_nav_menu('headerMenuLocation', 'Header Menu Location');
     // register_nav_menu('footerLocation1', 'Footer Location 1');
