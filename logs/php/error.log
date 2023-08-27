@@ -90,3 +90,6 @@ Stack trace:
 [27-Aug-2023 03:47:32 UTC] PHP Warning:  Trying to access array offset on value of type null in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 3
 [27-Aug-2023 03:47:32 UTC] PHP Warning:  Undefined array key "subtitle" in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 6
 [27-Aug-2023 03:47:32 UTC] PHP Warning:  Undefined array key "photo" in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 9
+[27-Aug-2023 04:03:44 UTC] PHP Warning:  Undefined array key "photo" in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 21
+[27-Aug-2023 04:03:47 UTC] PHP Warning:  Undefined array key "photo" in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 21
+[27-Aug-2023 04:05:19 UTC] PHP Warning:  Undefined array key "photo" in /Users/persisrandolph/Local Sites/fictional-university/app/public/wp-content/themes/fictional-university-theme/functions.php on line 21
